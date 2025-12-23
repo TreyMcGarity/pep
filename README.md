@@ -41,12 +41,6 @@ npm install
 npm run dev
 ```
 
-Files you may want to edit:
-
-- `app/page.tsx` — the homepage layout and content
-- `app/globals.css` — color tokens and simple utilities
-- `app/artifacts/logo.png` — replace with your logo image
-
 
 ## Learn More
 
