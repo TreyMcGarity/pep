@@ -18,7 +18,35 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repository includes a basic personal homepage in the `app/` folder with the following sections:
+
+- Header: top bar with your logo (from `app/artifacts/logo.png`), your name, role and a "Download Resume" button.
+- Projects: simple responsive project gallery cards for showcasing projects.
+- Resume: a short summary and highlights panel; full resume can be linked with `/resume.pdf`.
+- Contact: email and social links.
+- Footer: small copyright/footer bar.
+
+Styling and colors were added in `app/globals.css` using these tokens:
+
+- Background: `#0F1419` (fallback `#12171C` as alt)
+- Surface panels: `#1A222B`
+- Accent (logo blue): `#8FB3C6`
+- Primary text: `#E6EEF3`
+- Muted text: `#9FB3C1`
+
+To run the site locally:
+
+```bash
+npm install
+npm run dev
+```
+
+Files you may want to edit:
+
+- `app/page.tsx` — the homepage layout and content
+- `app/globals.css` — color tokens and simple utilities
+- `app/artifacts/logo.png` — replace with your logo image
+
 
 ## Learn More
 
