@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-      "migrate:make": "npx knex migrate:make",
-      "migrate:latest": "npx knex migrate:latest --knexfile ./knexfile.js",
-      "migrate:rollback": "npx knex migrate:rollback --knexfile ./knexfile.js",
-      "seed:make": "npx knex seed:make",
-      "seed:run": "npx knex seed:run --knexfile ./knexfile.js"
+    "migrate:make": "npx knex migrate:make",
+    "migrate:latest": "npx knex migrate:latest --knexfile ./knexfile.js",
+    "migrate:rollback": "npx knex migrate:rollback --knexfile ./knexfile.js",
+    "seed:make": "npx knex seed:make",
+    "seed:run": "npx knex seed:run --knexfile ./knexfile.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.0",
     "knex": "^3.1.0",
     "next": "16.1.0",
     "pg": "^8.16.3",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

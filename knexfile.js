@@ -1,7 +1,17 @@
 /**
  * Knex configuration for PostgreSQL.
- * Uses environment variables (see .env.example).
+ * Loads .env.local so migration scripts pick up the same credentials as Next.js.
  */
+require('fs').existsSync('.env.local') &&
+  require('fs').readFileSync('.env.local', 'utf8')
+    .split('\n')
+    .forEach(line => {
+      const [key, ...val] = line.split('=');
+      if (key && !key.startsWith('#') && val.length) {
+        process.env[key.trim()] = val.join('=').trim();
+      }
+    });
+
 const common = {
   client: 'pg',
   connection: {
