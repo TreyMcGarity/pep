@@ -13,9 +13,7 @@ export default function Header() {
       <header className="sticky top-0 z-40 w-full border-b border-white/10 bg-[--bg]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <a href="#top" className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 shadow-lg shadow-black/20">
-              <Image src={logo} alt="logo" width={44} height={44} className="rounded-full" />
-            </div>
+            <Image src={logo} alt="logo" width={52} height={52} className="h-13 w-13" />
             <div>
               <div className="text-base font-semibold text-white">Trey McGarity</div>
               <div className="text-xs text-[--text-muted]">Software Developer</div>
