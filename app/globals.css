@@ -1,22 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0F1419; /* background */
-  --bg-alt: #12171C;
-  --surface: #1A222B; /* panels */
-  --accent: #8FB3C6; /* logo blue */
-  --text-primary: #E6EEF3;
-  --text-muted: #9FB3C1;
+  --bg: #071019;
+  --bg-alt: #0D1721;
+  --surface: #121d2a;
+  --accent: #8FB3C6;
+  --text-primary: #F6F9FC;
+  --text-muted: #A8B8C3;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(143, 179, 198, 0.16), transparent 28%),
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
   color: var(--text-primary);
   font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
 }
 
+::selection {
+  background: rgba(143, 179, 198, 0.35);
+  color: white;
+}
+
 .surface {
-  background: var(--surface);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(14px);
 }
 
 .accent {
@@ -27,12 +41,6 @@ body {
   color: var(--text-muted);
 }
 
-a.button-download {
-  background: var(--accent);
-  color: var(--bg-alt);
-}
-
-/* Animations */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
@@ -49,18 +57,5 @@ a.button-download {
 
 .animate-scale-in {
   animation: scaleIn 360ms cubic-bezier(.2,.8,.2,1) both;
-}
-
-/* Responsive surface padding */
-.surface {
-  padding: 1rem;
-}
-
-@media (min-width: 640px) {
-  .surface { padding: 1.25rem; }
-}
-
-@media (min-width: 1024px) {
-  .surface { padding: 1.5rem; }
 }
 
