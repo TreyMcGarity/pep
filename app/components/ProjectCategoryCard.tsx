@@ -1,3 +1,13 @@
+const themeClasses: Record<string, string> = {
+  javascript: '!border-amber-400/70 shadow-[inset_0_0_0_1px_rgba(251,191,36,0.35)]',
+  react: '!border-cyan-400/70 shadow-[inset_0_0_0_1px_rgba(34,211,238,0.35)]',
+  fullstack: '!border-emerald-400/70 shadow-[inset_0_0_0_1px_rgba(74,222,128,0.35)]',
+  java: '!border-orange-500/70 shadow-[inset_0_0_0_1px_rgba(249,115,22,0.35)]',
+  cpp: '!border-violet-400/70 shadow-[inset_0_0_0_1px_rgba(167,139,250,0.35)]',
+  python: '!border-sky-400/70 shadow-[inset_0_0_0_1px_rgba(56,189,248,0.35)]',
+  default: '!border-white/20 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]',
+};
+
 export default function ProjectCard({
   title,
   year,
@@ -8,6 +18,7 @@ export default function ProjectCard({
   repoUrl,
   secondaryRepoUrl,
   liveUrl,
+  theme,
 }: {
   title: string;
   year?: string | number;
@@ -18,9 +29,12 @@ export default function ProjectCard({
   repoUrl?: string;
   secondaryRepoUrl?: string;
   liveUrl?: string;
+  theme?: string;
 }) {
+  const themeClass = themeClasses[theme ?? 'default'] ?? themeClasses.default;
+
   return (
-    <article className="group rounded-[24px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-6 shadow-lg shadow-black/20 transition duration-200 hover:-translate-y-1 hover:border-[--accent]/40">
+    <article className={`group rounded-[24px] border border-white/10 bg-[#162230] p-6 shadow-lg shadow-black/25 transition duration-200 hover:-translate-y-1 ${themeClass}`}>
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[--accent]">{accent}</p>
@@ -32,7 +46,7 @@ export default function ProjectCard({
       <p className="mt-4 text-sm leading-7 text-[--text-muted]">{description}</p>
 
       {metrics ? (
-        <div className="mt-4 inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm font-medium text-[--text-primary]">
+        <div className="mt-4 inline-flex rounded-full border border-white/10 bg-[#1c2a3a] px-3 py-1 text-sm font-medium text-[--text-primary]">
           {metrics}
         </div>
       ) : null}
@@ -40,7 +54,7 @@ export default function ProjectCard({
       {stack && stack.length > 0 ? (
         <div className="mt-5 flex flex-wrap gap-2">
           {stack.map((item) => (
-            <span key={item} className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium text-[--text-muted]">
+            <span key={item} className="rounded-full border border-white/10 bg-[#192534] px-3 py-1 text-xs font-medium text-[--text-muted]">
               {item}
             </span>
           ))}
@@ -54,8 +68,8 @@ export default function ProjectCard({
           </a>
         ) : null}
         {repoUrl ? (
-          <a href={repoUrl} target="_blank" rel="noreferrer" className="font-semibold text-[--accent] transition hover:text-white">
-            Open frontend repo
+          <a href={repoUrl} target="_blank" rel="noreferrer" className={`transition hover:text-white ${secondaryRepoUrl ? 'font-semibold text-[--accent]' : 'font-semibold text-[--accent]'}`}>
+            {secondaryRepoUrl ? 'Open frontend repo' : 'Open repo'}
           </a>
         ) : null}
         {secondaryRepoUrl ? (

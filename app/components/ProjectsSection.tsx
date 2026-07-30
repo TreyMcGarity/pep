@@ -11,6 +11,7 @@ export default function ProjectsSection() {
       metrics: 'Live app + GitHub repo',
       repoUrl: 'https://github.com/TreyMcGarity/Game_Of_Life',
       liveUrl: 'https://treymcgarity.github.io/Game_Of_Life/',
+      theme: 'javascript',
     },
     {
       title: 'Airline Reservation System',
@@ -21,6 +22,7 @@ export default function ProjectsSection() {
       metrics: 'Frontend + backend repos',
       repoUrl: 'https://github.com/TreyMcGarity/airline-reservation-frontend',
       secondaryRepoUrl: 'https://github.com/TreyMcGarity/airline-reservation-backend',
+      theme: 'fullstack',
     },
     {
       title: 'Coach Me',
@@ -31,6 +33,7 @@ export default function ProjectsSection() {
       metrics: 'Frontend + backend repos',
       repoUrl: 'https://github.com/TreyMcGarity/coach-me-fe',
       secondaryRepoUrl: 'https://github.com/TreyMcGarity/coach-me-be',
+      theme: 'fullstack',
     },
     {
       title: 'VillageGuard',
@@ -40,6 +43,27 @@ export default function ProjectsSection() {
       stack: ['Java', 'OOP', 'Engineering'],
       metrics: 'GitHub repo',
       repoUrl: 'https://github.com/TreyMcGarity/VillageGuard',
+      theme: 'java',
+    },
+    {
+      title: 'Runner',
+      year: '2024',
+      accent: 'C++ terminal game',
+      description: 'A terminal-based game project that demonstrates systems thinking, game logic, and C++ implementation skills.',
+      stack: ['C++', 'Terminal Game', 'Systems'],
+      metrics: 'GitHub repo',
+      repoUrl: 'https://github.com/TreyMcGarity/Runner',
+      theme: 'cpp',
+    },
+    {
+      title: 'CS379_ML',
+      year: '2024',
+      accent: 'LLM and training with Python',
+      description: 'A machine learning project focused on LLM-related experimentation and Python-based training workflows.',
+      stack: ['Python', 'LLM', 'Machine Learning'],
+      metrics: 'GitHub repo',
+      repoUrl: 'https://github.com/TreyMcGarity/CS379_ML',
+      theme: 'python',
     },
   ];
 
@@ -48,10 +72,10 @@ export default function ProjectsSection() {
       <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[--accent]">Featured from GitHub</p>
-          <h2 className="mt-2 text-3xl font-semibold text-white">Projects that reflect your growing engineering profile</h2>
+          <h2 className="mt-2 text-3xl font-semibold text-white">Projects that reflect my engineering profile</h2>
         </div>
         <p className="max-w-xl text-sm leading-7 text-[--text-muted]">
-          These repositories highlight frontend work, service-layer projects, and a range of web development experiments tied to your GitHub account.
+          These repositories highlight frontend work, service-layer projects, and a range of web development experiments tied to my GitHub account.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -67,6 +91,7 @@ export default function ProjectsSection() {
             repoUrl={project.repoUrl}
             secondaryRepoUrl={project.secondaryRepoUrl}
             liveUrl={project.liveUrl}
+            theme={project.theme}
           />
         ))}
       </div>

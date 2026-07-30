@@ -1,16 +1,97 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import ProjectsSection from './components/ProjectsSection';
 import ResumeSection from './components/ResumeSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-[--bg] font-sans text-[--text-primary]">
-      <Header />
+const focusItems = [
+  {
+    title: 'Secure Applications',
+    body: 'with strong access patterns, clean architecture, and reliable workflows.',
+  },
+  {
+    title: 'Modern Frontends',
+    body: 'built with React, Next.js, and polished UI systems.',
+  },
+  {
+    title: 'Practical Delivery',
+    body: 'from product thinking to implementation and iteration.',
+  },
+  {
+    title: 'Thoughtful Engineering',
+    body: 'focused on clarity, maintainability, and long-term product value.',
+  },
+  {
+    title: 'Reliable Collaboration',
+    body: 'bridging product needs, technical constraints, and user experience.',
+  },
+  {
+    title: 'APIs',
+    body: 'designing clean, reliable interfaces that connect systems with intention.',
+  },
+  {
+    title: 'Secure Databases & Data Analytics',
+    body: 'building data foundations that are safe, structured, and useful for insight.',
+  },
+];
 
-      <main className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <section className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+export default function Home() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % focusItems.length);
+    }, 6000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative isolate min-h-screen overflow-x-hidden bg-[--bg] font-sans text-[--text-primary]">
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-x-0 top-40 bottom-0 flex items-stretch justify-center gap-[7vw] opacity-30 sm:top-44 lg:top-48">
+          <div
+            className="mt-[2.5rem] h-[calc(100%-2.5rem)] w-[14vw] min-w-[86px] max-w-[190px] bg-[rgba(143,179,198,0.22)] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] sm:mt-[3rem] sm:h-[calc(100%-3rem)] sm:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]"
+          />
+          <div
+            className="-mt-[2.5rem] h-[calc(100%+2.5rem)] w-[16vw] min-w-[98px] max-w-[220px] bg-[rgba(143,179,198,0.38)] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] sm:-mt-[5rem] sm:h-[calc(100%+5rem)] sm:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]"
+          />
+          <div
+            className="mt-[2.5rem] h-[calc(100%-2.5rem)] w-[14vw] min-w-[86px] max-w-[190px] bg-[rgba(143,179,198,0.22)] [clip-path:polygon(0_0,100%_1%,100%_100%,0_100%)] sm:mt-[3rem] sm:h-[calc(100%-3rem)] sm:[clip-path:polygon(0_0,100%_3%,100%_100%,0_100%)]"
+          />
+        </div>
+      </div>
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,rgba(143,179,198,0.07),transparent_35%),linear-gradient(135deg,rgba(7,16,25,0.2),rgba(13,23,33,0.16))]" />
+      <div className="relative z-10">
+        <Header />
+
+        <div className="mx-auto max-w-6xl px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8">
+          <div className="flex justify-center">
+            <div className="w-full max-w-3xl rounded-[24px] border border-white/10 bg-white/5 p-5 text-center transition duration-700 sm:p-6">
+              <div className="text-sm leading-7 text-[--text-muted]">
+                <span className="block text-lg font-semibold text-white">{focusItems[activeIndex].title}</span>
+                <span className="mt-2 block">{focusItems[activeIndex].body}</span>
+              </div>
+              <div className="mt-5 flex justify-center gap-2">
+                {focusItems.map((item, index) => (
+                  <button
+                    key={item.title}
+                    type="button"
+                    aria-label={`Show ${item.title}`}
+                    onClick={() => setActiveIndex(index)}
+                    className={`h-2.5 rounded-full transition-all duration-500 ${index === activeIndex ? 'w-8 bg-[--accent]' : 'w-2.5 bg-white/30 hover:bg-white/50'}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <section>
           <div className="surface animate-fade-up rounded-[28px] border border-white/10 p-8 shadow-2xl shadow-black/20 sm:p-10">
             <div className="inline-flex items-center rounded-full border border-[--accent]/30 bg-[--accent]/10 px-3 py-1 text-sm font-medium text-[--accent]">
               Building secure, reliable software with a product mindset
@@ -45,28 +126,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="surface animate-scale-in rounded-[28px] border border-white/10 p-6 shadow-xl shadow-black/20">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[--accent]">Current focus</p>
-            <ul className="mt-5 space-y-4 text-sm leading-7 text-[--text-muted]">
-              <li className="rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
-                <span className="font-semibold text-white">Secure applications</span> with strong access patterns, clean architecture, and reliable workflows.
-              </li>
-              <li className="rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
-                <span className="font-semibold text-white">Modern frontends</span> built with React, Next.js, and polished UI systems.
-              </li>
-              <li className="rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
-                <span className="font-semibold text-white">Practical delivery</span> from product thinking to implementation and iteration.
-              </li>
-            </ul>
-          </div>
         </section>
 
         <ProjectsSection />
         <ResumeSection />
         <ContactSection />
-      </main>
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }

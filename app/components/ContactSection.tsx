@@ -1,7 +1,7 @@
 export default function ContactSection() {
   return (
     <section id="contact" className="scroll-mt-24">
-      <div className="rounded-[28px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 shadow-xl shadow-black/20 sm:p-10">
+      <div className="rounded-[28px] border border-white/10 bg-[#162230] p-8 shadow-xl shadow-black/20 sm:p-10">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[--accent]">Contact</p>
