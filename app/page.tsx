@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </div>
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,rgba(143,179,198,0.07),transparent_35%),linear-gradient(135deg,rgba(7,16,25,0.2),rgba(13,23,33,0.16))]" />
-      <div className="relative z-10">
+      <div className="relative z-10 pt-20 sm:pt-24">
         <Header />
 
         <div className="mx-auto max-w-6xl px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8">

@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b border-white/10 bg-[--bg]/80 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-40 w-full border-b border-white/10 bg-[--bg]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <a href="#top" className="flex min-w-0 items-center gap-3">
             <Image src={logo} alt="logo" width={52} height={52} className="h-13 w-13" />
