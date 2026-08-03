@@ -41,8 +41,9 @@ export default function ProjectsSection() {
       accent: 'Java project',
       description: 'A Java-based project that reflects a broader software engineering focus and structured implementation work.',
       stack: ['Java', 'OOP', 'Engineering'],
-      metrics: 'GitHub repo',
+      metrics: 'Live app + GitHub repo',
       repoUrl: 'https://github.com/TreyMcGarity/VillageGuard',
+      liveUrl: 'https://treymcgarity.github.io/VillageGuard/',
       theme: 'java',
     },
     {
