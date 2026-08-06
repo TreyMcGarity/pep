@@ -1,58 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## PEP
+
+Personal engineering portfolio built with Next.js, React, TypeScript, and a small PostgreSQL/Knex setup for local database work.
+
+## Overview
+
+The site is a static-exported portfolio with these main sections:
+
+- Hero area with an animated focus carousel and calls to action.
+- Featured projects rendered as responsive cards.
+- Resume snapshot with a short summary and highlights.
+- Contact section with email and profile links.
+- Footer with site-level branding.
+
+The app uses the Next.js App Router, custom styling in `app/globals.css`, and production export settings in `next.config.ts`.
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This repository includes a basic personal homepage in the `app/` folder with the following sections:
-
-- Header: top bar with your logo (from `app/artifacts/logo.png`), your name, role and a "Download Resume" button.
-- Projects: simple responsive project gallery cards for showcasing projects.
-- Resume: a short summary and highlights panel; full resume can be linked with `/resume.pdf`.
-- Contact: email and social links.
-- Footer: small copyright/footer bar.
-
-Styling and colors were added in `app/globals.css` using these tokens:
-
-- Background: `#0F1419` (fallback `#12171C` as alt)
-- Surface panels: `#1A222B`
-- Accent (logo blue): `#8FB3C6`
-- Primary text: `#E6EEF3`
-- Muted text: `#9FB3C1`
-
-To run the site locally:
+Install dependencies and start the development server:
 
 ```bash
 npm install
 npm run dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - start the local Next.js development server.
+- `npm run build` - create the production export.
+- `npm run start` - start the production server.
+- `npm run lint` - run ESLint.
+- `npm run deploy` - publish the exported site from `out/` with GitHub Pages.
+- `npm run migrate:make` - create a new Knex migration.
+- `npm run migrate:latest` - apply database migrations.
+- `npm run migrate:rollback` - roll back the latest migration.
+- `npm run seed:make` - create a new seed file.
+- `npm run seed:run` - run database seeds.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Database
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The repository includes a small PostgreSQL/Knex setup under `db/` and helper scripts under `scripts/`.
 
-## Deploy on Vercel
+Default local connection values come from `knexfile.js` and the scripts:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Host: `127.0.0.1`
+- Port: `5432`
+- User: `postgres`
+- Password: `password`
+- Database: `pep_dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Useful helper scripts:
+
+- `scripts/create_database.js` - create the local development database if it does not exist.
+- `scripts/clean_db_migrations.js` - remove the portfolio migration tables and records.
+- `scripts/inspect_tables.js` - inspect the current public tables and their columns.
+
+## Project Structure
+
+- `app/` - main Next.js app, layout, page, and UI sections.
+- `app/components/` - reusable portfolio sections and cards.
+- `db/migrations/` - Knex migrations for `category` and `project` tables.
+- `db/seeds/` - sample seed data for categories and projects.
+- `scripts/` - local database utilities.
+
+## Notes
+
+- Production output is configured for static export in `next.config.ts`.
+- The production build uses a `/pep` base path and asset prefix.
+- The portfolio content is centered in `app/page.tsx`, with metadata defined in `app/layout.tsx`.
