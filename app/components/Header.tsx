@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import logo from '../artifacts/logo.png';
+import logo from '../icon.png';
 import ResumePreviewModal from './ResumePreviewModal';
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
       <header className="fixed inset-x-0 top-0 z-40 w-full border-b border-white/10 bg-[--bg]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <a href="#top" className="flex min-w-0 items-center gap-3">
-            <Image src={logo} alt="logo" width={52} height={52} className="h-13 w-13" />
+            <Image src={logo} alt="logo" width={56} height={56} className="h-14 w-14" />
             <div className="min-w-0">
               <div className="text-base font-semibold text-white">Trey McGarity</div>
               <div className="truncate text-xs text-[--text-muted]">Software Developer</div>
@@ -47,7 +47,7 @@ export default function Header() {
               onClick={handleOpenResume}
               className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-[--text-primary] transition hover:border-[--accent]/40 hover:text-[--accent]"
             >
-              View resume
+              View Resume
             </button>
           </div>
 
