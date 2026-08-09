@@ -2,6 +2,8 @@
 
 Personal engineering portfolio built with Next.js, React, TypeScript, and a small PostgreSQL/Knex setup for local database work.
 
+Hosted Link on github pages: https://treymcgarity.github.io/pep/
+
 ## Overview
 
 The site is a static-exported portfolio with these main sections:
