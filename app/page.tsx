@@ -97,10 +97,10 @@ export default function Home() {
               Building secure, reliable software with a product mindset
             </div>
             <h1 className="mt-6 text-4xl font-semibold leading-tight text-white sm:text-5xl">
-              I build software that feels thoughtful, dependable, and ready for real users.
+              I build software that is thoughtful, dependable, and ready for real-world use.
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-[--text-muted]">
-              From modern web experiences to service-driven platforms, I focus on creating work that is practical, secure, and enjoyable to use.
+              From modern web experiences to service-driven platforms, I create solutions that are practical, secure, and genuinely useful to the people who rely on them.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="rounded-full bg-[--accent] px-5 py-3 text-sm font-semibold text-[--bg-alt] transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-[--accent]/20">
@@ -110,18 +110,46 @@ export default function Home() {
                 Let&apos;s connect
               </a>
             </div>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
-                <div className="text-2xl font-semibold text-white">5+</div>
-                <div className="mt-1 text-sm text-[--text-muted]">years building</div>
+            <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
+                <div className="text-lg font-semibold text-white">Systems & Backend</div>
+                <div className="mt-2 text-sm text-[--text-muted]">Robust software foundations across low-level and enterprise systems.</div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs text-[--text-primary]">
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">C++</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">Java</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">Python</span>
+                </div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
-                <div className="text-2xl font-semibold text-white">ServiceNow</div>
-                <div className="mt-1 text-sm text-[--text-muted]">secure platforms</div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
+                <div className="text-lg font-semibold text-white">Platform Engineering</div>
+                <div className="mt-2 text-sm text-[--text-muted]">Secure workflows, automation, and service-driven platform experiences.</div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs text-[--text-primary]">
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">ServiceNow</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">APIs</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">Automation</span>
+                </div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
-                <div className="text-2xl font-semibold text-white">Full-stack</div>
-                <div className="mt-1 text-sm text-[--text-muted]">web + systems</div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
+                <div className="text-lg font-semibold text-white">Data & AI</div>
+                <div className="mt-2 text-sm text-[--text-muted]">Structured data systems, analytics, and modern AI-enabled workflows.</div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs text-[--text-primary]">
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">Data Engineering</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">SQL</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">Postgres</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">AI</span>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition duration-200 hover:border-[--accent]/30 hover:bg-white/10">
+                <div className="text-lg font-semibold text-white">Product & UI</div>
+                <div className="mt-2 text-sm text-[--text-muted]">Thoughtful interfaces and product-minded execution from concept to delivery.</div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs text-[--text-primary]">
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">TypeScript</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">React</span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">Game Dev</span>
+                </div>
               </div>
             </div>
           </div>
