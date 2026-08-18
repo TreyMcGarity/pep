@@ -61,7 +61,7 @@ export default function ResumePreviewModal({ open, onClose }: ResumePreviewModal
               <section>
                 <h4 className="text-base font-semibold uppercase tracking-[0.2em] text-slate-800">Professional Summary</h4>
                 <p className="mt-2">
-                  ServiceNow Developer with an active DoD Secret clearance, CompTIA Security+, RMF/eMASS experience, and five years of technical experience spanning full-stack development, enterprise database work, and IT operations. Building secure, role-based enterprise applications, workflows, and integrations in regulated environments.
+                  ServiceNow Developer with an active DoD Secret clearance, CompTIA Security+, RMF/eMASS experience, and five years of technical experience spanning full-stack development, enterprise database work, and IT operations. Building secure, role-based ServiceNow solutions for enterprise IT environments, including the Service Operations Workspace, ITSM application configuration, and a custom Marketing CSM application tailored to business needs in regulated settings.
                 </p>
               </section>
 
@@ -79,7 +79,7 @@ export default function ResumePreviewModal({ open, onClose }: ResumePreviewModal
               <section>
                 <h4 className="text-base font-semibold uppercase tracking-[0.2em] text-slate-800">Technical Skills</h4>
                 <p className="mt-2">
-                  Languages: JavaScript (ES6+), Python, SQL, Java, C++. ServiceNow: custom applications, ACLs, UI Builder, workflows, data models, integrations. Frontend: React, Next.js, Redux, Tailwind, HTML/CSS. Backend & Data: Node.js, Express, Knex, PostgreSQL, SQL reporting & analytics, REST APIs, JWT/Auth. Security & Compliance: RMF, eMASS, IAM concepts, secure system design, ACL/role-based access. Platforms & Tools: Git, GitHub, Docker, Jira, Agile/Scrum, Azure, AWS fundamentals, Linux, Windows.
+                  Languages: JavaScript (ES6+), Python, SQL, Java, C++. ServiceNow: Service Operations Workspace, ITSM application configuration, custom app development, ACLs, UI Builder, workflows, data models, and integrations. Frontend: React, Next.js, Redux, Tailwind, HTML/CSS. Backend & Data: Node.js, Express, Knex, PostgreSQL, SQL reporting & analytics, REST APIs, JWT/Auth. Security & Compliance: RMF, eMASS, IAM concepts, secure system design, ACL/role-based access. Platforms & Tools: Git, GitHub, Docker, Jira, Agile/Scrum, Azure, AWS fundamentals, Linux, Windows.
                 </p>
               </section>
 
@@ -90,9 +90,10 @@ export default function ResumePreviewModal({ open, onClose }: ResumePreviewModal
                     <p className="font-semibold text-slate-900">Junior Software Developer — TekSynap</p>
                     <p className="text-slate-500">Oct 2025 – Present</p>
                     <ul className="mt-2 list-disc space-y-1 pl-5">
-                      <li>Develop and maintain custom ServiceNow applications, tables, and workflows supporting enterprise IT and operations use cases.</li>
-                      <li>Configure ACLs, UI Builder components, and data models to enforce secure, role-based access across environments.</li>
-                      <li>Collaborate with architects and senior developers to analyze requirements, debug access issues, and improve platform usability.</li>
+                      <li>Develop and support ServiceNow solutions for enterprise operations, including the Service Operations Workspace, ITSM application configuration, and custom workflow-driven enhancements.</li>
+                      <li>Configure ACLs, UI Builder components, forms, and data models to enforce secure, role-based access and improve usability across ServiceNow applications.</li>
+                      <li>Build and maintain a custom Marketing CSM application, supporting business workflows, table design, process automation, and operational reporting in a regulated environment.</li>
+                      <li>Collaborate with architects and senior developers to analyze requirements, debug platform issues, and deliver scalable ServiceNow improvements.</li>
                     </ul>
                   </div>
                   <div>
